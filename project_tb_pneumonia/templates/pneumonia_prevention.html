@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<style>
+
+
+</style>
+<div class="container-fluid my-5">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block" style="height:100vh;">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('upload')}}">
+              Upload Image
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('history')}}">
+              View History
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="row">
+        <h1>
+          Pneumonia Prevention
+        </h1>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K_r-kMJjh8Y?si=fm2MsB5RHM1IBmUZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <br>
+        <pre>
+          <h2> Precautions for Pneumonia </h2>
+          •	accination: The pneumococcal conjugate vaccine (PCV13) protects against 13 types of bacteria that can cause pneumonia. It's given to babies in a series of three or four doses starting at two months old, and the final dose is given before they're 15 months old. Adults 65 and older can get a one-time injection, and people with risk factors may need a booster shot every 5 to 10 years.
+
+          •	Healthy lifestyle: Eat a healthy diet, get regular physical activity, and avoid smoking.
+
+          •	Manage other conditions: If you have a chronic condition like asthma, diabetes, or heart disease, take good care of it.
+
+          •	Avoid people who are sick: If you're sick, stay away from others as much as possible.
+
+          •	Cover your mouth: When you cough or sneeze, cover your nose and mouth with a tissue or your elbow or sleeve.
+
+          •	Wash your hands: Wash your hands often, especially after coughing and sneezing.
+
+          •	Clean and disinfect: Clean and disinfect surfaces that are touched often.
+
+          •	Stay warm: Keep your home warm to reduce your exposure to cold temperatures.
+
+        </pre>
+
+      </div>
+    </main>
+  </div>
+</div>
+{% endblock %}

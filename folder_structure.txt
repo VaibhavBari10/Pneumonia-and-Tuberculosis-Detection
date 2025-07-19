@@ -1,0 +1,23 @@
+./
+    folder_structure.txt
+    generate_tree.py
+    .idea/
+        .gitignore
+        modules.xml
+        project_tb_pneumonia.iml
+        workspace.xml
+    Dataset/
+    project report/
+        final report (4).pdf
+        final report (9).docx
+    project_tb_pneumonia/
+        app.py
+        Direct run text.txt
+        install_steps.txt
+        output.csv
+        pneumonia.ipynb
+        pneumonia_model.h5
+        pneumonia_model_alex.h5
+        requirements.txt
+        tube.sql
+        Untitled.ipynb

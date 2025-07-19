@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<style>
+
+
+</style>
+<div class="container-fluid my-5">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block" style="height:100vh;">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('upload')}}">
+              Upload Image
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('history')}}">
+              View History
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.justdial.com/Amravati/Tuberculosis-Doctors/nct-10500650">
+              TB Specialist Doctors
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{url_for('prevention')}}">
+              TB Prevention
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{{url_for('report')}}">
+              Report
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="row">
+        <h3>
+          SOME GLOBAL REPORTS ON TUBERCULOSIS
+        </h3>
+
+       Tuberculosis (TB) is a communicable disease that is a major cause of ill health and one of the leading causes of death worldwide. Until the coronavirus (CO VID-19) pandemic, TB was the leading cause of death from a single infectious agent, ranking above HIV/AI DS. TB is caused by the bacillus Mycobacterium tuberculosis, which is spread when people who are sick with TB expel bacteria in tom the air (e.g. by coughing). About a quarter of the global population is estimated to have been infected with TB (1), but most people will not go on to develop TB disease and some will clear the infection(2, 3). Of the total number of people who develop TB each year, about 90% are adults, with more cases among men than women. The disease typically affects the lungs (pulmonary TB) but can affect other sites as well. Without treatment, the death rate from TB disease is high (about 50%) (4). With currently-recommended treatments (a 4–6 months course of anti-TB drugs), about 85% of people can be cured. Regimens of 1–6 months are available to treat TB infection. Universal health coverage
+(UHC) is necessary to ensure that all people with disease or infection can access these treatments. The number of people acquiring infection and developing disease (and in turn the number of deaths caused by TB) can also be reduced through multisectoral action to address TB determinants such as poverty, undernourishment, HIV infection, smoking and diabetes. Some countries have already reduced their burden of TB disease to fewer than 10 cases and less than one death per 100 000 population per year. Research breakthroughs (e.g. a new vaccine) are needed to rapidly reduce the number of new cases each year (i.e. TB incidence) worldwide to the levels already achieved in
+these low-burden countries.
+The World Health Organization (WHO) has published a global TB report every year since 1997. The purposeof the report is to provide a comprehensive and up-to-date assessment of the status of the TB epidemic and progress in the response at global, regional and national levels, in the context of global commitments, strategiesand targets.
+<br>
+        <img src="/static/images/1.jpg" style="width:500px;height:250px" />
+<br>
+        TB case notifications
+Big fall in 2020, partial recovery in 2021
+The most obvious and immediate impact on TB of disruptions caused by the CO VID-19 pandemic was a largeglobal fall in the number of people newly diagnosed with TB and reported (i.e. officially notified) in 2020, Compared with 2019 (Fig. 1). Following large increases between 2017 and 2019, there was a reduction of 18%between 2019 and 2020, from 7.1 million to 5.8 million.There was a partial recovery in 2021, to 6.4 million.
+        <br>
+        <img src="/static/images/2.jpg" style="width:500px;height:250px" />
+<br>
+A similar pattern of increases in notifications of people newly diagnosed with TB up to 2019 followed by a sharp fall in 2020 and some recovery in 2021 is evident in two of the six WHO regions: the Americas and South- East Asia (Fig. 2). The WHO Eastern Mediterranean Region saw a marked reduction in notifications between 2019 and 2020, followed by an almost complete recovery in 2021. In the WHO European Region, there was a clear negative impact in 2020, but the reduction from 2020–2021 was consistent with the pre-2020 trend. In the WHO Western Pacific Region, there was no recovery in 2021. The WHO African Region stood out as experiencing only a modest negative impact in 2020 (–2.3%), and notifications in 2021 were above the 2019 level. The WHO regions of South-East Asia and the Western Pacific accounted for most of the global reductions (compared with 2019): 84% of the total in 2020, and 99% in 2021.
+
+
+
+
+
+      </div>
+    </main>
+  </div>
+</div>
+{% endblock %}

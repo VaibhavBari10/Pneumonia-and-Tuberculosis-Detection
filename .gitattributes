@@ -1,0 +1,7 @@
+
+
+# Normalize line endings
+* text=auto
+
+# Always use LF for XML files
+*.xml text eol=lf

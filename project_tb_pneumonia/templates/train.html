@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}Dataset Training{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center">Train Model on Dataset</h2>
+
+    <form id="uploadForm" action="{{ url_for('train') }}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="dataset">Upload Dataset (ZIP format)</label>
+            <input type="file" class="form-control" id="dataset" name="dataset" accept=".zip" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Start Training</button>
+    </form>
+
+    <br><br>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+    </div>
+
+    <br>
+    <div id="result" class="text-center" style="display: none;">
+        <h4>Training Complete!</h4>
+        <p>Accuracy: <span id="accuracy"></span></p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // Handle form submission
+    $('#uploadForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            xhr: function() {
+                var xhr = new XMLHttpRequest();
+                xhr.upload.addEventListener('progress', function(e) {
+                    if (e.lengthComputable) {
+                        var percent = Math.round((e.loaded / e.total) * 100);
+                        $('#progressBar').css('width', percent + '%').attr('aria-valuenow', percent);
+                    }
+                }, false);
+                return xhr;
+            },
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                // Show results
+                $('#progressBar').css('width', '100%');
+                $('#accuracy').text(response.accuracy);
+                $('#result').show();
+            },
+            error: function() {
+                alert('Error uploading dataset');
+            }
+        });
+    });
+</script>
+{% endblock %}

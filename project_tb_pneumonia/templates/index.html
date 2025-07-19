@@ -1,0 +1,60 @@
+{%extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %} 
+    <div class="container-fluid bg-light">
+        {% if msg|length %}
+            <div class="alert alert-success alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <p class="text-center">{{msg}}</p>
+            </div>
+        {% endif %}
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/images/img1.jpg" class="d-block w-100" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/img2.jpg" class="d-block w-100" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/img3.png" class="d-block w-100" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-lg-6 text-center">
+                <h1 class="display-4 mb-4">Learn About Tuberculosis</h1>
+                <p class="lead mb-5">Tuberculosis is an infectious disease caused by the bacterium Mycobacterium tuberculosis. It typically affects the lungs, but can also affect other parts of the body such as the kidneys, spine, and brain. Common symptoms include coughing, chest pain, fever, and weight loss. </p>
+                <a class="btn btn-primary btn-lg" href="https://www.who.int/news-room/fact-sheets/detail/tuberculosis" role="button">Learn More</a>
+            </div>
+        </div>
+        
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="h4 mb-3">What is Tuberculosis?</h2>
+                    <p>Tuberculosis, commonly known as TB, is a contagious bacterial infection that primarily affects the lungs. It spreads through the air when a person with TB coughs, sneezes, or talks, and it can also spread to other parts of the body, such as the kidneys, spine, and brain.</p>
+                    <p>Symptoms of TB can include a persistent cough that lasts for weeks, chest pain, coughing up blood or phlegm, fatigue, weight loss, and fever.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="h4 mb-3">Prevention & Treatment</h2>
+                    <p>There are several ways to prevent the spread of TB, including getting vaccinated, avoiding close contact with people who have TB, and covering your mouth and nose when coughing or sneezing.</p>
+                    <p>If you think you may have TB, it's important to see a healthcare provider for diagnosis and treatment. Treatment usually involves a combination of antibiotics taken over a period of several months. With proper treatment, most people with TB can be cured.</p>
+                </div>
+            </div>
+        </div>    
+{% endblock %}

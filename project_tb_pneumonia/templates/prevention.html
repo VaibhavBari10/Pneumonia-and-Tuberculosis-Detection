@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<style>
+
+
+</style>
+<div class="container-fluid my-5">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block" style="height:100vh;">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('upload')}}">
+              Upload Image
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('history')}}">
+              View History
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="row">
+        <h1>
+          TB Prevention
+        </h1>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/H_R_b7VGMFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <br>
+        <pre>
+          <h2> Precautions for TB </h2>
+          1. Take all of your medicines as they’re prescribed, until your doctor takes you off them.
+
+          2. Keep all your doctor appointments.
+
+          3. Always cover your mouth with a tissue when you cough or sneeze. Seal the tissue in a plastic bag, then throw it away.
+
+          4. Wash your hands after coughing or sneezing.
+
+          5. Don’t visit other people and don’t invite them to visit you.
+
+          6. Stay home from work, school, or other public places.
+
+          7. Use a fan or open windows to move around fresh air.
+
+          8. Don’t use public transportation.
+        </pre>
+
+      </div>
+    </main>
+  </div>
+</div>
+{% endblock %}

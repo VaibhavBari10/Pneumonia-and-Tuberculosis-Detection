@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block title %}Upload-File{% endblock %}
+
+{% block content %}
+<style>
+
+
+</style>
+<div class="container-fluid my-5">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block" style="height:100vh;">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('upload')}}">
+              Upload Image
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('history')}}">
+              View History
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.justdial.com/Amravati/Tuberculosis-Doctors/nct-10500650">
+              TB Specialist Doctors
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{url_for('prevention')}}">
+              TB Prevention
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{{url_for('report')}}">
+              Report
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="row">
+            <h3>Model Information</h3>
+             <p>
+                    We use convolutional neural networks (CNNs) for a binary image classification. The model is evaluated using the accuracy metric. During training, the model is trained on the train set of 3500 files of normal and 700 files of tuberculosis persons. Also it validated on the validation set for 30 epochs. The libraries used in the project are TensorFlow, Keras, NumPy, Pandas, OpenCV, Matplotlib, and Scikit-learn.
+
+                </p>
+            <br>
+            <h4>Tuberculosis(TB)</h4>
+            <p> Tuberculosis (TB) is a serious illness that mainly affects the lungs. The germs that cause tuberculosis are a type of bacteria.
+
+Tuberculosis can spread when a person with the illness coughs, sneezes or sings. This can put tiny droplets with the germs into the air. Another person can then breathe in the droplets, and the germs enter the lungs.
+
+Tuberculosis spreads easily where people gather in crowds or where people live in crowded conditions. People with HIV/AIDS and other people with weakened immune systems have a higher risk of catching tuberculosis than people with typical immune systems.
+
+Drugs called antibiotics can treat tuberculosis. But some forms of the bacteria no longer respond well to treatments.
+            </p>
+            <br>
+            <h4>Symptoms</h4>
+            &nbsp; -Low fever. <br>
+            &nbsp; -Tiredness. <br>
+            &nbsp; -Cough.     <br>
+            &nbsp; -Chest pain. <br>
+             &nbsp; -Sudden, severe headache. <br>
+             &nbsp; -Confusion. <br>
+             &nbsp; -Seizures. <br>
+             &nbsp; -Difficulty breathing. <br>
+
+
+            <hr color="Orange">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input class="form-control" type="file" name="file" accept="image/png">
+                    </div><br>
+                    <button class="btn btn-success" type="submit" style="margin:auto;display:block;">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                {% if file_path|length %}
+                    <img src="/{{file_path}}" style="margin:auto;display:block;width:400px;height:400px">
+                <br><br>
+
+                <b>
+                    <p style="background-color:orange;width:500px" class="text-center">Result :-  {{file_result}}</p>
+                </b>
+                <br><br>
+                <p class="text-center">Note : This is a software generated result.</p>
+               <br><br>
+                <!--
+                <a href="https://www.justdial.com/Amravati/Tuberculosis-Doctors/nct-10500650" target="_blank" class="btn btn-success">TB Specialist Doctors</a>
+                <a href="{{url_for('prevention')}}" class="btn btn-warning">TB Prevention</a>
+                -->
+                {% endif %}
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </main>
+  </div>
+</div>
+{% endblock %}
