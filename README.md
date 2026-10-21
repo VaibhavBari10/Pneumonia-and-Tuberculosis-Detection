@@ -55,7 +55,7 @@ Some model, dataset, and template files may be provided separately or may be pre
 
 ## Dataset and Model Files
 
-- **Dataset:** [Pneumonia and Tuberculosis Datasets on Kaggle](https://www.kaggle.com/datasets/vaibhavsantoshbari/pneumonia-and-tuberculosis-datasets)
+- **Dataset:** https://www.kaggle.com/datasets/vaibhavsantoshbari/pneumonia-and-tuberculosis-datasets?select=Dataset
 - **Model files:** [Download models from Google Drive](https://drive.google.com/drive/folders/17SHBMbyQKfA1UaapepB4-rTp7AW0NnrB?usp=drive_link)
 
 Place model files in the location expected by `app.py`, or update the model paths in the code. The application currently refers to model files such as `pneumonia_model_alex.h5` and `64x3-CNN.model`; ensure all required models are available before starting the server.
